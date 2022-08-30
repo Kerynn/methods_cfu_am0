@@ -79,3 +79,26 @@ irb(main):024:0> user_name.empty?
 
 # 2: Do some research (either testing out with your own code or Googling) to build an understanding of what the `!` does, when at the
 # end of a method name. Show your understading by providing an example and writing an explanation.
+
+# The '!' (bang symbol) is used to show a type of warning, or caution this method will modify the variable. I saw online that these methods are sometimes
+# referred to as 'dangerous methods'. It is mainly used to improve readability of the code- ie make it more clear when performing a method that will
+# change the variable. The method will return 'nil' if the string was not modified.
+
+# In the below example, I tested with the delete method:
+
+favorite_dog = "Charlie"
+
+irb(main):010:0> favorite_dog.delete "ar"
+=> "Chlie"
+irb(main):015:0> favorite_dog.delete! "ar"
+=> "Chlie"
+irb(main):016:0> favorite_dog.delete! "z"
+=> nil
+irb(main):017:0> favorite_dog.delete "z"
+=> "Chlie"
+
+# When I first ran the delete method without '!', the return value came back with the string modified- The "ar" was removed from the "Charlie" string.
+# The second time I ran the delete method, I included the '!' and ran the same argument which again came back with the same return value "Chlie". However
+# if I was sharing this code, it would be easier to read that this method would cause a modification especially if there were multiple lines of code.
+# In line 95, I used 'delete!'' and this time included a value that was not in the string "z", so the return came back nil. To see the difference with including
+# the '!', as seen in line 97-98, I ran the same argument again but without the '!'. The return value came back with the string "Chlie" instead of returning 'nil'.
