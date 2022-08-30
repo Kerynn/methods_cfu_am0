@@ -71,7 +71,6 @@ irb(main):023:0> user_name = ""
 => ""
 irb(main):024:0> user_name.empty?
 => true
-
 # The empty? method will ask if the variable length is true or false. The return value will be true if empty and false if not empty.
 # In my example, my variable is user_name = "kerynn_12", so the first time I ran this method, the return came back false. I have characters added in my string.
 # The second time I ran this, I changed my variable to be user_name = "" to create an empty string. When I ran the empty method this time, the return came
@@ -100,5 +99,5 @@ irb(main):017:0> favorite_dog.delete "z"
 # When I first ran the delete method without '!', the return value came back with the string modified- The "ar" was removed from the "Charlie" string.
 # The second time I ran the delete method, I included the '!' and ran the same argument which again came back with the same return value "Chlie". However
 # if I was sharing this code, it would be easier to read that this method would cause a modification especially if there were multiple lines of code.
-# In line 95, I used 'delete!'' and this time included a value that was not in the string "z", so the return came back nil. To see the difference with including
-# the '!', as seen in line 97-98, I ran the same argument again but without the '!'. The return value came back with the string "Chlie" instead of returning 'nil'.
+# In line 94, I used 'delete!'' and this time included a value that was not in the string "z", so the return came back nil. To see the difference with including
+# the '!', as seen in line 96-97, I ran the same argument again but without the '!'. The return value came back with the string "Chlie" instead of returning 'nil'.
